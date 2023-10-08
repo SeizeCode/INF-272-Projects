@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="#">
+<head>
+    <meta charset="utf-8" />
+    <title>To do Task</title>
+    <meta name="author" content="Nkosinathi Msiza" />
+    <link rel="stylesheet" href="stylehome1.css">
+</head>
+<body>
+    <div class="sectiondiv">
+        <h3>Module Information</h3>
+        <div>
+            <div>
+                <form>
+                    <div>
+                            <label>Module Code</label>
+                        <input type="number" id="ModuleID" placeholder=" 272" limit="0" />
+                    </div>
+                    <div>
+                        <label>Module Lecturer</label>
+                        <input type="text" id="LectureID" placeholder="Prof. MC Mathhee"  />
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            onclick="addmodule()"
+                            id="ModuleSubmit"
+                            value="Add"
+                        />
+                    </div>
+                </form>
+            </div>
+
+            <div class="section-info">
+                <table id="modtable">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Module Lecture</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ModuleTable" >
+
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <div class="sectiondiv">
+        <h3>Task</h3>
+        <div>
+            <div>
+                <form>
+                    <div>
+                        <label>Task Name</label>
+                        <input type="text" id="TaskID" placeholder="HTML,css & JAVASCRIPT"  />
+                    </div>
+                    <div>
+                        <label>Task Due Date</label>
+                        <input type="date" id="DateID" />
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            onclick="AddDate()"
+                            id="taskSubmit"
+                            value="Add"
+                        />
+                    </div>
+                </form>
+            </div>
+
+            <div class="section-info">
+                <table id="tasktable">
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Task Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasktable" ></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectiondiv1">
+        
+    <div class="sectiondiv">
+        <h3>To do list</h3>
+        <div>
+            <div>
+                <form>
+                    <div>
+                        <label>Module</label>
+                        <select id="modlesel"></select>
+                    </div>
+                    <div>
+                        <label>Task</label>
+                        <select id="tasksel"></select>
+                    </div>
+                    <div>
+                    </br>
+                        <label>Description</label>
+                        <textarea id="DescriptionID" placeholder="Intro to front-End programming" ></textarea>
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                           onclick="Todo()"
+                            id="Tod"
+                            value="Add"
+                        />
+                    </div>
+                </form>
+            </div>
+        
+
+            <div class="section-info">
+                <table id="todotable" >
+                    <thead>
+                        <tr>
+                            <th>Module Code</th>
+                            <th>Task</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todoable" class="delete"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="todolist.js"></script>
+</body>
+</html>
